@@ -15,7 +15,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-copper-100 to-forest-100 rounded-full text-forest-800 text-xs sm:text-sm font-medium mb-8 mx-auto max-w-full">
             <span className="w-2 h-2 bg-copper-600 rounded-full mr-2 flex-shrink-0"></span>
-            <span className="text-center leading-tight">Small-scale mining digitalisation and AI-powered credit intelligence for the unbanked mining economy</span>
+            <span className="text-center leading-tight">Digital tools and AI-powered credit intelligence for the underbanked small-scale mining economy</span>
           </div>
 
           {/* Main Headline */}
