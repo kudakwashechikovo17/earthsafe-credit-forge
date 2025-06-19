@@ -14,7 +14,7 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 90 133 90;
+    --primary: 60 90 60;
     --primary-foreground: 255 255 255;
 
     --secondary: 248 247 244;
@@ -23,15 +23,15 @@
     --muted: 248 247 244;
     --muted-foreground: 100 116 139;
 
-    --accent: 252 217 182;
-    --accent-foreground: 188 68 22;
+    --accent: 188 68 22;
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 90 133 90;
+    --ring: 60 90 60;
 
     --radius: 0.75rem;
   }
@@ -52,7 +52,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-forest-600 via-copper-500 to-tech-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-forest-700 via-copper-600 to-forest-800 bg-clip-text text-transparent;
   }
   
   .card-hover {

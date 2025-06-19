@@ -4,11 +4,11 @@ import { Card } from '@/components/ui/card';
 
 const ContactCTA = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-forest-800 via-forest-700 to-tech-800 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-forest-900 via-forest-800 to-copper-800 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-copper-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-tech-400 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-10 w-40 h-40 bg-copper-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-forest-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -31,7 +31,7 @@ const ContactCTA = () => {
               </p>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-copper-500 to-copper-600 hover:from-copper-600 hover:to-copper-700 text-white w-full rounded-xl"
+                className="bg-gradient-to-r from-copper-600 to-copper-700 hover:from-copper-700 hover:to-copper-800 text-white w-full rounded-xl"
               >
                 Book a Live Demo
               </Button>
@@ -45,7 +45,7 @@ const ContactCTA = () => {
               </p>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-tech-500 to-tech-600 hover:from-tech-600 hover:to-tech-700 text-white w-full rounded-xl"
+                className="bg-gradient-to-r from-forest-600 to-forest-700 hover:from-forest-700 hover:to-forest-800 text-white w-full rounded-xl"
               >
                 Talk to Our Team
               </Button>
@@ -78,11 +78,11 @@ const ContactCTA = () => {
                 <span>SOC 2 Compliant</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-tech-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-forest-400 rounded-full"></div>
                 <span>Bank-Grade Security</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-forest-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-copper-400 rounded-full"></div>
                 <span>ISO 27001 Certified</span>
               </div>
             </div>
