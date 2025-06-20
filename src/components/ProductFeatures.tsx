@@ -74,39 +74,6 @@ const ProductFeatures = () => {
             </Card>
           ))}
         </div>
-
-        {/* Dashboard mockup */}
-        <div className="mt-20 max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-            <div className="bg-green-700 p-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                <span className="text-white/80 text-sm ml-4">Earthsafe MineTrack Dashboard</span>
-              </div>
-            </div>
-            <div className="p-8">
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-green-50 p-6 rounded-xl border border-green-200">
-                  <h4 className="text-green-800 font-semibold mb-2">Credit Score</h4>
-                  <div className="text-3xl font-bold text-green-900">685</div>
-                  <div className="text-sm text-green-700">Building credit history</div>
-                </div>
-                <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-200">
-                  <h4 className="text-yellow-800 font-semibold mb-2">Monthly Profit</h4>
-                  <div className="text-3xl font-bold text-yellow-900">$1,850</div>
-                  <div className="text-sm text-yellow-700">Last 30 days</div>
-                </div>
-                <div className="bg-green-50 p-6 rounded-xl border border-green-200">
-                  <h4 className="text-green-800 font-semibold mb-2">Loan Available</h4>
-                  <div className="text-3xl font-bold text-green-900">$5,200</div>
-                  <div className="text-sm text-yellow-700">Equipment financing</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
