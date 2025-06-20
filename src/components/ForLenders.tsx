@@ -58,21 +58,6 @@ const ForLenders = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="border-t border-gray-200 pt-6">
-                <blockquote className="text-center italic text-gray-800 mb-4">
-                  "A game changer for de-risking small-scale lending. The data quality is unprecedented."
-                </blockquote>
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center text-white font-bold">
-                    AK
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-gray-900">Amara Kone</div>
-                    <div className="text-sm text-gray-700">Senior Risk Manager, West Africa</div>
-                  </div>
-                </div>
-              </div>
             </Card>
           </div>
 

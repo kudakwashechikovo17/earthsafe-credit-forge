@@ -8,15 +8,14 @@ const FounderQuote = () => {
         <div className="max-w-5xl mx-auto">
           <Card className="p-8 md:p-12 bg-white shadow-xl border-gray-200">
             <div className="grid lg:grid-cols-3 gap-8 items-center">
-              {/* Image placeholder */}
+              {/* Founder Image */}
               <div className="lg:col-span-1">
-                <div className="w-full aspect-square bg-gray-200 rounded-xl flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <div className="w-20 h-20 bg-green-700 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                      KC
-                    </div>
-                    <p className="text-sm">Founder Photo</p>
-                  </div>
+                <div className="w-full aspect-square rounded-xl overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/75f79b78-8eff-4fcb-a159-fba9b2bc24be.png" 
+                    alt="Kudakwashe Chikovo, Founder & CEO"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 

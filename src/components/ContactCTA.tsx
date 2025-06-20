@@ -1,8 +1,125 @@
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 
 const ContactCTA = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setIsOpen(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: ''
+      });
+    }, 3000);
+  };
+
+  const ContactForm = () => (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="name">Full Name *</Label>
+          <Input
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <Label htmlFor="email">Email *</Label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="mt-1"
+          />
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="company">Company/Organization</Label>
+          <Input
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleInputChange}
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <Label htmlFor="phone">Phone Number</Label>
+          <Input
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            className="mt-1"
+          />
+        </div>
+      </div>
+
+      <div>
+        <Label htmlFor="message">Message</Label>
+        <Textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleInputChange}
+          placeholder="Tell us about your needs or ask any questions..."
+          className="mt-1"
+          rows={4}
+        />
+      </div>
+
+      {isSubmitted ? (
+        <div className="text-center py-4">
+          <div className="text-green-600 font-semibold mb-2">✓ Thank you for your interest!</div>
+          <p className="text-gray-600">We'll be in touch with you shortly.</p>
+        </div>
+      ) : (
+        <Button type="submit" className="w-full bg-green-700 hover:bg-green-800">
+          Submit Request
+        </Button>
+      )}
+    </form>
+  );
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-green-900 via-green-800 to-yellow-800 relative overflow-hidden">
       {/* Background decoration */}
@@ -29,13 +146,22 @@ const ContactCTA = () => {
               <p className="text-white/80 mb-6 text-sm sm:text-base">
                 See how your operational data can unlock equipment financing and build your credit profile.
               </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
-                onClick={() => window.open('mailto:earthsafeminetrack@gmail.com', '_blank')}
-              >
-                Book a Live Demo
-              </Button>
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <DialogTrigger asChild>
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
+                  >
+                    Book a Live Demo
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Request a Demo</DialogTitle>
+                  </DialogHeader>
+                  <ContactForm />
+                </DialogContent>
+              </Dialog>
             </Card>
 
             <Card className="p-6 sm:p-8 bg-white/10 backdrop-blur-sm border-white/20 card-hover">
@@ -44,13 +170,22 @@ const ContactCTA = () => {
               <p className="text-white/80 mb-6 text-sm sm:text-base">
                 Discover how verified mining data can reduce risk and expand your lending portfolio.
               </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
-                onClick={() => window.open('https://wa.me/263718370460', '_blank')}
-              >
-                Talk to Our Team
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
+                  >
+                    Talk to Our Team
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Contact Our Team</DialogTitle>
+                  </DialogHeader>
+                  <ContactForm />
+                </DialogContent>
+              </Dialog>
             </Card>
           </div>
 
@@ -72,24 +207,6 @@ const ContactCTA = () => {
             >
               📱 +263718370460
             </Button>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="mt-16 pt-8 border-t border-white/20">
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-white/70 text-xs sm:text-sm px-4">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
-                <span>SOC 2 Compliant</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></div>
-                <span>Bank-Grade Security</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
-                <span>ISO 27001 Certified</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
