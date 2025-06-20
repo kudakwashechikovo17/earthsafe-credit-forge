@@ -135,7 +135,7 @@ const ContactCTA = () => {
           </h2>
           
           <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-2xl mx-auto px-4">
-            Join hundreds of miners and lenders who are already transforming the mining finance landscape with AI-powered credit intelligence.
+            Join miners and lenders who are already transforming the mining finance landscape with AI-powered credit intelligence.
           </p>
 
           {/* CTA Cards */}
