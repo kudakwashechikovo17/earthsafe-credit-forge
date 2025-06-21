@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -41,18 +42,11 @@ const Hero = () => {
     }, 3000);
   };
 
-  const scrollToHowItWorks = () => {
-    const element = document.getElementById('how-it-works');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const ContactForm = () => (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <Label htmlFor="name" className="font-bold">Full Name *</Label>
+          <Label htmlFor="name">Full Name *</Label>
           <Input
             id="name"
             name="name"
@@ -63,7 +57,7 @@ const Hero = () => {
           />
         </div>
         <div>
-          <Label htmlFor="email" className="font-bold">Email *</Label>
+          <Label htmlFor="email">Email *</Label>
           <Input
             id="email"
             name="email"
@@ -78,7 +72,7 @@ const Hero = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <Label htmlFor="company" className="font-bold">Company/Organization</Label>
+          <Label htmlFor="company">Company/Organization</Label>
           <Input
             id="company"
             name="company"
@@ -88,7 +82,7 @@ const Hero = () => {
           />
         </div>
         <div>
-          <Label htmlFor="phone" className="font-bold">Phone Number</Label>
+          <Label htmlFor="phone">Phone Number</Label>
           <Input
             id="phone"
             name="phone"
@@ -100,7 +94,7 @@ const Hero = () => {
       </div>
 
       <div>
-        <Label htmlFor="message" className="font-bold">Message</Label>
+        <Label htmlFor="message">Message</Label>
         <Textarea
           id="message"
           name="message"
@@ -114,11 +108,11 @@ const Hero = () => {
 
       {isSubmitted ? (
         <div className="text-center py-4">
-          <div className="text-green-600 font-bold mb-2">✓ Thank you for your interest!</div>
-          <p className="text-gray-600 font-bold">We'll be in touch with you shortly.</p>
+          <div className="text-green-600 font-semibold mb-2">✓ Thank you for your interest!</div>
+          <p className="text-gray-600">We'll be in touch with you shortly.</p>
         </div>
       ) : (
-        <Button type="submit" className="w-full bg-green-700 hover:bg-green-800 font-bold">
+        <Button type="submit" className="w-full bg-green-700 hover:bg-green-800">
           Submit Request
         </Button>
       )}
@@ -131,7 +125,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/lovable-uploads/2f6ab835-4d42-4d85-a5a9-6792fb5102c3.png)'
+          backgroundImage: 'url(/lovable-uploads/8ec48d40-e9ab-4028-a66b-a1995f374392.png)'
         }}
       ></div>
       
@@ -147,50 +141,79 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs sm:text-sm font-bold mb-8 mx-auto max-w-full">
+          <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs sm:text-sm font-medium mb-8 mx-auto max-w-full">
             <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2 flex-shrink-0"></span>
-            <span className="text-center leading-tight font-bold">Digital tools and AI-powered credit intelligence for the underbanked small-scale mining economy</span>
+            <span className="text-center leading-tight">Digital tools and AI-powered credit intelligence for the underbanked small-scale mining economy</span>
+          </div>
+
+          {/* Top Request Demo Button */}
+          <div className="mb-6">
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg" 
+                  className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Request Demo
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-white">
+                <DialogHeader>
+                  <DialogTitle>Request a Demo</DialogTitle>
+                </DialogHeader>
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2 drop-shadow-lg">
             Unlock Equipment Financing with{' '}
-            <span className="text-yellow-300 font-bold">Mining Data</span>{' '}
+            <span className="text-yellow-300">Mining Data</span>{' '}
             That Works for You
           </h1>
 
           {/* Subtext */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-bold mb-10 max-w-3xl mx-auto leading-relaxed px-4 drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed px-4 drop-shadow-md">
             Earthsafe MineTrack transforms production logs, receipts, and compliance records into a lender-trusted credit score — giving small-scale miners access to tools they need to grow.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 px-4">
-            <Dialog open={isOpen} onOpenChange={setIsOpen}>
+            <Dialog>
               <DialogTrigger asChild>
                 <Button 
                   size="lg" 
-                  className="bg-green-700 hover:bg-green-800 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto min-w-0"
+                  className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto min-w-0"
                 >
                   Request a Demo
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md bg-white">
                 <DialogHeader>
-                  <DialogTitle className="font-bold">Request a Demo</DialogTitle>
+                  <DialogTitle>Request a Demo</DialogTitle>
                 </DialogHeader>
                 <ContactForm />
               </DialogContent>
             </Dialog>
             
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={scrollToHowItWorks}
-              className="border-2 border-white/50 text-white font-bold hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
-            >
-              Explore the Platform
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
+                >
+                  Explore the Platform
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-white">
+                <DialogHeader>
+                  <DialogTitle>Explore the Platform</DialogTitle>
+                </DialogHeader>
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
