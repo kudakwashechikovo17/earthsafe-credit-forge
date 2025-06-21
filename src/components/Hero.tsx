@@ -1,6 +1,124 @@
+
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 
 const Hero = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setIsOpen(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: ''
+      });
+    }, 3000);
+  };
+
+  const ContactForm = () => (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="name">Full Name *</Label>
+          <Input
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <Label htmlFor="email">Email *</Label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="mt-1"
+          />
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="company">Company/Organization</Label>
+          <Input
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleInputChange}
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <Label htmlFor="phone">Phone Number</Label>
+          <Input
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            className="mt-1"
+          />
+        </div>
+      </div>
+
+      <div>
+        <Label htmlFor="message">Message</Label>
+        <Textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleInputChange}
+          placeholder="Tell us about your needs or ask any questions..."
+          className="mt-1"
+          rows={4}
+        />
+      </div>
+
+      {isSubmitted ? (
+        <div className="text-center py-4">
+          <div className="text-green-600 font-semibold mb-2">✓ Thank you for your interest!</div>
+          <p className="text-gray-600">We'll be in touch with you shortly.</p>
+        </div>
+      ) : (
+        <Button type="submit" className="w-full bg-green-700 hover:bg-green-800">
+          Submit Request
+        </Button>
+      )}
+    </form>
+  );
+
   return (
     <section id="home" className="relative bg-white py-20 overflow-hidden min-h-screen flex items-center">
       {/* Background image */}
@@ -28,6 +146,26 @@ const Hero = () => {
             <span className="text-center leading-tight">Digital tools and AI-powered credit intelligence for the underbanked small-scale mining economy</span>
           </div>
 
+          {/* Top Request Demo Button */}
+          <div className="mb-6">
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg" 
+                  className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Request Demo
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-white">
+                <DialogHeader>
+                  <DialogTitle>Request a Demo</DialogTitle>
+                </DialogHeader>
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
+          </div>
+
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2 drop-shadow-lg">
             Unlock Equipment Financing with{' '}
@@ -42,19 +180,40 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 px-4">
-            <Button 
-              size="lg" 
-              className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto min-w-0"
-            >
-              Request a Demo
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-yellow-400 text-yellow-300 hover:bg-yellow-400/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
-            >
-              Explore the Platform
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg" 
+                  className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto min-w-0"
+                >
+                  Request a Demo
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-white">
+                <DialogHeader>
+                  <DialogTitle>Request a Demo</DialogTitle>
+                </DialogHeader>
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
+            
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
+                >
+                  Explore the Platform
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-white">
+                <DialogHeader>
+                  <DialogTitle>Explore the Platform</DialogTitle>
+                </DialogHeader>
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>

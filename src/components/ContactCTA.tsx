@@ -121,17 +121,17 @@ const ContactCTA = () => {
   );
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-green-900 via-green-800 to-yellow-800 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-amber-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-yellow-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-green-500 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-10 w-40 h-40 bg-amber-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-slate-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 px-2">
-            Want to see <span className="text-yellow-300">Earthsafe</span> in action?
+            Want to see <span className="text-amber-300">Earthsafe</span> in action?
           </h2>
           
           <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-2xl mx-auto px-4">
@@ -150,12 +150,12 @@ const ContactCTA = () => {
                 <DialogTrigger asChild>
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
+                    className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
                   >
                     Book a Live Demo
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
+                <DialogContent className="sm:max-w-md bg-white">
                   <DialogHeader>
                     <DialogTitle>Request a Demo</DialogTitle>
                   </DialogHeader>
@@ -174,12 +174,12 @@ const ContactCTA = () => {
                 <DialogTrigger asChild>
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
+                    className="bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
                   >
                     Talk to Our Team
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
+                <DialogContent className="sm:max-w-md bg-white">
                   <DialogHeader>
                     <DialogTitle>Contact Our Team</DialogTitle>
                   </DialogHeader>
