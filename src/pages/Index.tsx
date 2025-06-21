@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
 import ProductFeatures from '@/components/ProductFeatures';
+import MiningGallery from '@/components/MiningGallery';
 import ForMiners from '@/components/ForMiners';
 import FounderQuote from '@/components/FounderQuote';
 import ForLenders from '@/components/ForLenders';
@@ -16,6 +17,7 @@ const Index = () => {
       <Hero />
       <HowItWorks />
       <ProductFeatures />
+      <MiningGallery />
       <ForMiners />
       <FounderQuote />
       <ForLenders />

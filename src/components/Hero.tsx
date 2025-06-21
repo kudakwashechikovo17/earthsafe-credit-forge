@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -146,26 +145,6 @@ const Hero = () => {
             <span className="text-center leading-tight">Digital tools and AI-powered credit intelligence for the underbanked small-scale mining economy</span>
           </div>
 
-          {/* Top Request Demo Button */}
-          <div className="mb-6">
-            <Dialog open={isOpen} onOpenChange={setIsOpen}>
-              <DialogTrigger asChild>
-                <Button 
-                  size="lg" 
-                  className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  Request Demo
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md bg-white">
-                <DialogHeader>
-                  <DialogTitle>Request a Demo</DialogTitle>
-                </DialogHeader>
-                <ContactForm />
-              </DialogContent>
-            </Dialog>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2 drop-shadow-lg">
             Unlock Equipment Financing with{' '}
@@ -180,7 +159,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 px-4">
-            <Dialog>
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
                 <Button 
                   size="lg" 
@@ -197,23 +176,14 @@ const Hero = () => {
               </DialogContent>
             </Dialog>
             
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
-                >
-                  Explore the Platform
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md bg-white">
-                <DialogHeader>
-                  <DialogTitle>Explore the Platform</DialogTitle>
-                </DialogHeader>
-                <ContactForm />
-              </DialogContent>
-            </Dialog>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
+              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore the Platform
+            </Button>
           </div>
         </div>
       </div>
