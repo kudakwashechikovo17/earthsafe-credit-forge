@@ -176,14 +176,15 @@ const Hero = () => {
               </DialogContent>
             </Dialog>
             
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
-              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Explore the Platform
-            </Button>
+            <a href="https://app.earthsafemining.com" target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto transition-all duration-300 min-w-0"
+              >
+                Explore the Platform
+              </Button>
+            </a>
           </div>
         </div>
       </div>
