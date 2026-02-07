@@ -113,7 +113,7 @@ const ContactCTA = () => {
           <p className="text-gray-600">We'll be in touch with you shortly.</p>
         </div>
       ) : (
-        <Button type="submit" className="w-full bg-green-700 hover:bg-green-800">
+        <Button type="submit" className="w-full bg-amber-600 hover:bg-amber-700">
           Submit Request
         </Button>
       )}
