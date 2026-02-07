@@ -37,7 +37,7 @@ const Hero = () => {
 
           {/* Subtext */}
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed px-4 drop-shadow-md">
-            Earthsafe MineTrack transforms production logs, receipts, and compliance records into a lender-trusted credit score — giving small-scale miners access to tools they need to grow.
+            Earthsafe MineTrack transforms production logs, receipts, and compliance records into a lender-trusted credit score, giving small-scale miners access to tools they need to grow.
           </p>
 
           {/* CTA Button */}
