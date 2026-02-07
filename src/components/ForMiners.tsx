@@ -36,7 +36,7 @@ const ForMiners = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Grow with <span className="text-yellow-600">Confidence</span>
+              Grow with <span className="text-amber-600">Confidence</span>
             </h2>
             
             <p className="text-xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
@@ -63,7 +63,7 @@ const ForMiners = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-yellow-600 text-yellow-700 hover:bg-yellow-50 px-8 py-4 rounded-xl"
+                className="border-2 border-amber-600 text-amber-700 hover:bg-amber-50 px-8 py-4 rounded-xl"
               >
                 See How It Works
               </Button>

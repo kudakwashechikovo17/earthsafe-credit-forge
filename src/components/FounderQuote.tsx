@@ -23,7 +23,7 @@ const FounderQuote = () => {
               <div className="lg:col-span-2">
                 <div className="text-6xl text-green-700 mb-6">"</div>
                 <blockquote className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed italic">
-                  Small-scale miners already have the cash flow — what they lack is formal data. Earthsafe exists to bridge that gap and unlock affordable financing using credit scores built from the ground up.
+                  Small-scale miners already have the cash flow. What they lack is formal data. Earthsafe exists to bridge that gap and unlock affordable financing using credit scores built from the ground up.
                 </blockquote>
                 
                 <div className="border-t border-gray-200 pt-6">

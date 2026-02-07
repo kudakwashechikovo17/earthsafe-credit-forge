@@ -13,7 +13,7 @@ const ProductFeatures = () => {
       title: "Daily Profit + Expense Dashboards",
       description: "Real-time financial insights with clear profit and loss tracking",
       icon: "📊",
-      color: "bg-yellow-600"
+      color: "bg-amber-600"
     },
     {
       title: "Automated Compliance Alerts",
@@ -25,7 +25,7 @@ const ProductFeatures = () => {
       title: "AI-Powered Credit Score",
       description: "Transparent credit scoring with SHAP explanations you can understand",
       icon: "🧠",
-      color: "bg-yellow-700"
+      color: "bg-amber-700"
     },
     {
       title: "In-App Loan Offers",
@@ -37,7 +37,7 @@ const ProductFeatures = () => {
       title: "Downloadable Financial Statements",
       description: "Professional reports ready for banks, investors, and compliance",
       icon: "📄",
-      color: "bg-yellow-600"
+      color: "bg-amber-600"
     }
   ];
 
