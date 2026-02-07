@@ -40,8 +40,8 @@ const Hero = () => {
             Earthsafe MineTrack transforms production logs, receipts, and compliance records into a lender-trusted credit score, giving small-scale miners access to tools they need to grow.
           </p>
 
-          {/* CTA Button */}
-          <div className="flex justify-center items-center mb-12 px-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 px-4">
             <a href="https://app.earthsafemining.com" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
@@ -50,6 +50,14 @@ const Hero = () => {
                 Explore Earthsafe in Action
               </Button>
             </a>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-300"
+              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              See How It Works
+            </Button>
           </div>
         </div>
       </div>
