@@ -20,11 +20,11 @@ const MiningGallery = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-100">
+    <section className="py-16 bg-gradient-to-br from-forest-50 to-copper-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Empowering <span className="text-amber-600">Mining Communities</span>
+            Empowering <span className="text-gold-500">Mining Communities</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             From small-scale operations to advanced equipment financing, we support the entire mining ecosystem with data-driven solutions.
