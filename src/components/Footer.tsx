@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-amber-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-gold-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">E</span>
               </div>
               <div>
@@ -36,10 +36,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Platform</h4>
             <ul className="space-y-3 text-white/80">
-              <li><a href="#how-it-works" className="hover:text-amber-400 transition-colors">How It Works</a></li>
-              <li><a href="#for-miners" className="hover:text-amber-400 transition-colors">For Miners</a></li>
-              <li><a href="#for-lenders" className="hover:text-amber-400 transition-colors">For Lenders</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Pricing</a></li>
+               <li><a href="#how-it-works" className="hover:text-gold-300 transition-colors">How It Works</a></li>
+               <li><a href="#for-miners" className="hover:text-gold-300 transition-colors">For Miners</a></li>
+               <li><a href="#for-lenders" className="hover:text-gold-300 transition-colors">For Lenders</a></li>
+               <li><a href="#" className="hover:text-gold-300 transition-colors">Pricing</a></li>
             </ul>
           </div>
 
@@ -47,10 +47,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-3 text-white/80">
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Help Center</a></li>
-              <li><a href="#contact" className="hover:text-amber-400 transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">API Documentation</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Status Page</a></li>
+               <li><a href="#" className="hover:text-gold-300 transition-colors">Help Center</a></li>
+               <li><a href="#contact" className="hover:text-gold-300 transition-colors">Contact Us</a></li>
+               <li><a href="#" className="hover:text-gold-300 transition-colors">API Documentation</a></li>
+               <li><a href="#" className="hover:text-gold-300 transition-colors">Status Page</a></li>
             </ul>
           </div>
         </div>
@@ -58,10 +58,10 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 text-sm text-white/70 mb-4 md:mb-0">
-            <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Terms of Use</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Cookie Policy</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Security</a>
+             <a href="#" className="hover:text-gold-300 transition-colors">Privacy Policy</a>
+             <a href="#" className="hover:text-gold-300 transition-colors">Terms of Use</a>
+             <a href="#" className="hover:text-gold-300 transition-colors">Cookie Policy</a>
+             <a href="#" className="hover:text-gold-300 transition-colors">Security</a>
           </div>
           <div className="text-sm text-white/70">
             © 2024 Earthsafe MineTrack. All rights reserved.

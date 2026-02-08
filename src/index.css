@@ -51,9 +51,9 @@
 }
 
 @layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-forest-700 via-copper-600 to-forest-800 bg-clip-text text-transparent;
-  }
+   .gradient-text {
+     @apply bg-gradient-to-r from-forest-700 via-gold-500 to-forest-800 bg-clip-text text-transparent;
+   }
   
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;

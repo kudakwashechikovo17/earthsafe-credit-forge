@@ -114,9 +114,9 @@ const Header = () => {
           <p className="text-gray-600">We'll be in touch with you shortly.</p>
         </div>
       ) : (
-        <Button type="submit" className="w-full bg-amber-600 hover:bg-amber-700">
-          Submit Request
-        </Button>
+        <Button type="submit" className="w-full bg-gold-600 hover:bg-gold-700 text-white">
+           Submit Request
+         </Button>
       )}
     </form>
   );
