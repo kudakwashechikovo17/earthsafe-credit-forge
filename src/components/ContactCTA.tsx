@@ -113,25 +113,25 @@ const ContactCTA = () => {
           <p className="text-gray-600">We'll be in touch with you shortly.</p>
         </div>
       ) : (
-        <Button type="submit" className="w-full bg-amber-600 hover:bg-amber-700">
-          Submit Request
-        </Button>
+        <Button type="submit" className="w-full bg-gold-600 hover:bg-gold-700 text-white">
+           Submit Request
+         </Button>
       )}
     </form>
   );
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-amber-900 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-amber-500 rounded-full blur-3xl"></div>
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-gold-900 relative overflow-hidden">
+       {/* Background decoration */}
+       <div className="absolute inset-0 opacity-10">
+         <div className="absolute top-10 left-10 w-40 h-40 bg-gold-400 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-slate-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 px-2">
-            Want to see <span className="text-amber-300">Earthsafe</span> in action?
+            Want to see <span className="text-gold-300">Earthsafe</span> in action?
           </h2>
           
           <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-2xl mx-auto px-4">
@@ -150,7 +150,7 @@ const ContactCTA = () => {
                 <DialogTrigger asChild>
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
+                    className="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-white w-full rounded-xl py-3 sm:py-4 text-base sm:text-lg"
                   >
                     Book a Live Demo
                   </Button>

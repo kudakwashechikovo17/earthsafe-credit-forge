@@ -27,7 +27,7 @@ const ForLenders = () => {
   ];
 
   return (
-    <section id="for-lenders" className="py-20 bg-amber-50">
+    <section id="for-lenders" className="py-20 bg-gold-50">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left visual */}
@@ -63,7 +63,7 @@ const ForLenders = () => {
 
           {/* Right content */}
           <div className="animate-slide-in-right">
-            <div className="inline-flex items-center px-4 py-2 bg-amber-100 border border-amber-300 rounded-full text-green-800 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-gold-100 border border-gold-300 rounded-full text-green-800 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
               For Financial Institutions
             </div>
@@ -100,7 +100,7 @@ const ForLenders = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-amber-600 text-amber-700 hover:bg-amber-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto min-w-0"
+                className="border-2 border-gold-500 text-gold-600 hover:bg-gold-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl w-full sm:w-auto min-w-0"
               >
                 View Portfolio Data
               </Button>

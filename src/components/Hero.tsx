@@ -16,7 +16,7 @@ const Hero = () => {
 
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-amber-600 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gold-500 rounded-full blur-2xl"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-green-600 rounded-full blur-2xl"></div>
       </div>
 
@@ -24,14 +24,14 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs sm:text-sm font-medium mb-8 mx-auto max-w-full">
-            <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 flex-shrink-0"></span>
+            <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 flex-shrink-0"></span>
             <span className="text-center leading-tight">Digital tools and AI-powered credit intelligence for the underbanked small-scale mining economy</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight px-2 drop-shadow-lg">
             Unlock Equipment Financing with{' '}
-            <span className="text-amber-400">Mining Data</span>{' '}
+            <span className="text-gold-300">Mining Data</span>{' '}
             That Works for You
           </h1>
 
@@ -45,7 +45,7 @@ const Hero = () => {
             <a href="https://app.earthsafemining.com" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
-                className="bg-amber-600 hover:bg-amber-700 text-white px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gold-500 hover:bg-gold-600 text-white px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Explore Earthsafe in Action
               </Button>

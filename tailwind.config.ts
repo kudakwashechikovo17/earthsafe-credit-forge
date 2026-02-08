@@ -20,7 +20,6 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Simplified to 2 main colors with darker variants
 				forest: {
 					50: '#f4f6f4',
 					100: '#e8ede8',
@@ -44,6 +43,18 @@ export default {
 					700: '#9c3a16',
 					800: '#7d2f18',
 					900: '#652716',
+				},
+				gold: {
+					50: '#faf6eb',
+					100: '#f3eacc',
+					200: '#e8d49a',
+					300: '#dbb960',
+					400: '#d0a23a',
+					500: '#b8892a',
+					600: '#996d1f',
+					700: '#7a541c',
+					800: '#66451e',
+					900: '#563b1e',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
